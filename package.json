@@ -1,0 +1,48 @@
+{
+  "name": "redux-echo-with-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
+    "build": "browserify -d src/main.js -o src/bundle.js",
+    "build:watch": "watchify src/main.js -t babelify -o src/bundle.js -v"
+  },
+  "author": "yhor1e",
+  "license": "MIT",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [],
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-jest": "^18.0.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "enzyme": "^2.7.0",
+    "jest": "^18.1.0",
+    "react-addons-test-utils": "^15.4.1",
+    "watchify": "^3.8.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015",
+            "react"
+          ]
+        }
+      ]
+    ]
+  }
+}
